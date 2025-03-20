@@ -14,8 +14,6 @@ let createOne = async (req, res, next) => {
     }
 }
 
-
-
 let createAny = async (req, res, next) => {
     try {
         let dataCities = req.body;
