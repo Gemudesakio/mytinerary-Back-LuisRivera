@@ -1,0 +1,32 @@
+{
+  "name": "sprint2",
+  "version": "1.0.0",
+  "description": "practica de fulltack inicial aplicando react en el front, express en el back, en el entorno de node con mondodb",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node ./server.js",
+    "dev": "nodemon ./server.js",
+    "dbCity": "node ./models/data/cities.js"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gemudesakio/FullStackMERN.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gemudesakio/FullStackMERN/issues"
+  },
+  "homepage": "https://github.com/Gemudesakio/FullStackMERN#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongoose": "^8.12.1",
+    "morgan": "^1.10.0",
+    "nodemon": "^3.1.9"
+  }
+}
