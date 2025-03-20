@@ -3,6 +3,8 @@ import 'dotenv/config.js'
 import './config/database.js'
 import cors from 'cors'
 import morgan from 'morgan'
+import routerIndex from './router/index.js'
+
 
 
 const server = express()
@@ -17,7 +19,8 @@ server.use(express.json())
 server.use(cors())
 server.use(morgan('dev'))
 
-
+//router
+server.use('/api', routerIndex)
 //middlewares
 
 
