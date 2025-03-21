@@ -4,6 +4,9 @@ import './config/database.js'
 import cors from 'cors'
 import morgan from 'morgan'
 import routerIndex from './router/index.js'
+import error_handler from './middlewares/error_handler.js'
+import not_fount_handler from './middlewares/not_fount_handler.js'
+import error_400 from './middlewares/error_400.js'
 
 
 
@@ -22,6 +25,9 @@ server.use(morgan('dev'))
 //router
 server.use('/api', routerIndex)
 //middlewares
+server.use(not_fount_handler)
+server.use(error_400)
+server.use(error_handler)
 
 
 //finalmente escuchamos el servidor en el puerto

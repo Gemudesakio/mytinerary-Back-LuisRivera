@@ -21,7 +21,7 @@ let getById = async (req,res,next)=>{
             success:true,
             Cities:all
         })
-    } catch (error) {
+    } catch (error) {       
         next(error)
     }
     }
