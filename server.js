@@ -31,4 +31,4 @@ server.use(error_handler)
 
 
 //finalmente escuchamos el servidor en el puerto
-server.listen(port,ready)
+server.listen(port,'0.0.0.0',ready)
