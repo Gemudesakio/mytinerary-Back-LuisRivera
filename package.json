@@ -9,7 +9,8 @@
     "dev": "nodemon ./server.js",
     "dbCity": "node ./models/data/cities.js",
     "dbUser": "node ./models/data/users.js",
-    "dbItinerary": "node ./models/data/itineraries.js"
+    "dbItinerary": "node ./models/data/itineraries.js",
+    "dbActivity": "node ./models/data/activities.js"
 
   },
   "repository": {

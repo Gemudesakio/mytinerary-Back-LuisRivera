@@ -11,7 +11,14 @@ let schema = Schema({
     likes: {type:Number, required:true},
     user: {type:Schema.Types.ObjectId, ref:'user', required:true},
     city: {type:Schema.Types.ObjectId, ref:'city', required:true},
-    hashtags: [{ type: String }]
+    hashtags: [{ type: String }],
+    coments:[
+        {
+            user:{type:Schema.Types.ObjectId, ref:'user', required:true},
+            comment:{type:String, required:true},
+            date:{type:Date, default:Date.now()}
+        }
+    ]
 },
 {
     timestamps:true
