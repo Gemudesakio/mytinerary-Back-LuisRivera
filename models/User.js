@@ -7,6 +7,7 @@ let schema = Schema({
     password: {type:String, required:true},
     photo: {type:String, required:false},
     role: {type:Number, required:true},
+    online: {type:Boolean, default:false}
 },
 {
     timestamps:true
