@@ -1,5 +1,6 @@
-const validatorSchema = (schema) => [
+const validatorSchema = (schema) => [    
     (req,res,next)=>{
+        console.log("entro a validator");
         const validated = schema.validate(req.body, { abortEarly: false });
    if(validated.error){
         return  res.status(400).json({

@@ -7,10 +7,11 @@ import validatorSchema from "../middlewares/validatosSchemas.js";
 import schemaRegister from "../shemas/users/create.js";
 import accountExist from "../middlewares/accountExist.js";
 import createHash from "../middlewares/createHash.js";
+import passport from "../middlewares/passport.js";
 
 let routerUsers = Router()
 
-routerUsers.get('/all', getAll)
+routerUsers.get('/all',passport.authenticate('jwt',{session: false},),getAll)
 routerUsers.get('/id/:idParams', getById)
 routerUsers.post('/createOne',validatorSchema(schemaRegister),accountExist, createHash,createOne)
 routerUsers.post('createMany',validatorSchema(schemaRegister),createMany)

@@ -25,12 +25,18 @@ const schema = joi.object({
         'string.uri': 'Photo must be a valid URI',
         'string.empty': 'Photo cannot be empty'
     }),
-    role: joi.number().min(1).max(3).required().messages({
+    role: joi.number().min(1).max(3).messages({
         'number.base': 'Role must be a number',
         'number.min': 'Role must be at least 1',
         'number.max': 'Role must be at most 3',
         'any.required': 'Role is required'
-    })
+    }),
+    country: joi.string().required().messages({
+        'string.base': 'Country must be a string',
+        'string.empty': 'Country cannot be empty',
+        'any.required': 'Country is a required field'
+      })
+      
 });
 
 export default schema;

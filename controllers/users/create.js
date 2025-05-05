@@ -6,7 +6,8 @@ let createOne = async (req,res,next)=>{
         let newUser = await User.create(userData)
         return res.status(201).json({
             success:true,
-            response: newUser
+            response: newUser,
+            message: "user created successfully"
         })
 
     } catch (error) {

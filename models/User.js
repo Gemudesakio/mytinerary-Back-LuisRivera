@@ -6,7 +6,8 @@ let schema = Schema({
     email: {type:String, required:true},
     password: {type:String, required:true},
     photo: {type:String, required:false},
-    role: {type:Number, required:true},
+    country:{type:String, required:false},
+    role: {type:Number, default:1},
     online: {type:Boolean, default:false}
 },
 {
